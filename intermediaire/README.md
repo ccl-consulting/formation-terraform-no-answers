@@ -213,6 +213,7 @@ L'adresse IP de l'interface devra être la 6e IP du subnet (exemple: `10.0.1.5` 
 _Aide_:
 - [for_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
 - [Ressource: aws_network_inerface](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_interface)
+- [Fonction: cidrhost](https://developer.hashicorp.com/terraform/language/functions/cidrhost)
 
 
 ### Modules 1/3
