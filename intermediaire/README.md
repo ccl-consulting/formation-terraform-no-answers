@@ -210,6 +210,8 @@ Dans le fichier `network.tf`, créer une ressource `aws_network_interface` pour 
 
 L'adresse IP de l'interface devra être la 6e IP du subnet (exemple: `10.0.1.5` si le réseau est `10.0.1.0/24`).
 
+_Note_: Il sera beaucoup plus simple d'itérer directement sur la ressource `aws_subnet` plutôt que la variable `my_subnets`.
+
 _Aide_:
 - [for_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
 - [Ressource: aws_network_inerface](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/network_interface)
