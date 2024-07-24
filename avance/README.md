@@ -67,7 +67,6 @@ _Aide:_
 
 L'objectif de cet exercice est de gérer une ressource (une zone DNS) déjà existante avec Terraform plutôt que de simplement importer ses attributs via une data source. Nous expérimenterons une méthode qui permet de faciliter l'écriture de la spec de la ressource sans l'impacter par des changements involontaires.
 
-- Supprimer la Data Source `aws_route53_zone`
 - Créer une ressource `aws_route53_zone` générique:
   ```
   resource "aws_route53_zone" "my_zone" {
