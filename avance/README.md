@@ -138,6 +138,7 @@ _Aide:_
 - [Fonction: regexall](https://developer.hashicorp.com/terraform/language/functions/regexall)
 - [Fonction: length](https://developer.hashicorp.com/terraform/language/functions/length)
 - Il est possible d'utiliser `terraform console` pour tester les expressions
+- Regex à utiliser: `[^A-Za-z0-9]`
 
 
 ### Ignorer les changements
