@@ -23,8 +23,8 @@ L'objectif de cet exercice est de créer 3 enregistrements DNS en référençant
 - Utiliser la Data Source `aws_route53_zone` pour référencer dans Terraform la zone DNS qui sera utilisée dans la suite de cet exercice. Son nom: `student-<N>.com`.
 - Créer autant de ressources `aws_route53_record` que d'éléments dans la `map` ci-dessous à l'aide d'un `for_each`:
     - `records`:
-        - Doit avoir le format `app<X>.student-<N>.com`
-        - Basé sur la variable suivante (créer un fichier `vars.tf`):
+        - Adresse IP correspondant à l'application.
+          Basé sur la variable suivante (créer un fichier `vars.tf`):
           ```
           variable "records" {
             type = map(string)
@@ -35,6 +35,8 @@ L'objectif de cet exercice est de créer 3 enregistrements DNS en référençant
             }
           }
           ```
+    - `name`:
+        - Doit avoir le format `app<X>.student-<N>.com`
     - `zone_id`: La zone utilisée en Data Source
     - `type`: `"A"`
     - `ttl`: `300`
