@@ -45,7 +45,7 @@ Lorque plusieurs utilisateurs doivent apporter des modifications sur le même pr
 
 L'objectif de cet exercice est de configurer à l'aide du module [terraform-aws-tfstate-backend](https://github.com/cloudposse/terraform-aws-tfstate-backend) un Bucket S3 qui hébergera le "state" terraform. Une table "DynamoDB" est également créée pour y stocker un "LockID" afin d'éviter les exécutions concurrentes entre plusieurs utilisateurs.
 
-### Instructions
+#### Instructions
 
 - Créer un fichier `s3-backend.tf` avec le contenu suivant:
 
@@ -86,7 +86,7 @@ _Aide_:
 
 - [Gestion des workspaces](https://developer.hashicorp.com/terraform/cli/workspaces)
 
-### Utilisation du workspace dans les ressources
+#### Utilisation du workspace dans les ressources
 
 L'objectif de cet exercice est d'obtenir une ressource ayant des propriétés diffétentes en fonction du workspace pour lequel le code Terraform est exécuté.
 
@@ -97,7 +97,9 @@ _Aide:_
 - [aws_s3_bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
 - [terraform.workspace](https://developer.hashicorp.com/terraform/language/state/workspaces#current-workspace-interpolation)
 
-### Count avec une liste
+### Méta-arguments
+
+#### Count avec une liste
 
 L'objectif de cet exercice est de définir un nombre d'instanciation d'une ressource en fonction de la valeur d'une variable (ici la longueur d'une liste).
 
@@ -128,7 +130,7 @@ _Aide:_
 - [Count meta-argument](https://developer.hashicorp.com/terraform/language/meta-arguments/count)
 - [Length Function](https://developer.hashicorp.com/terraform/language/functions/length)
 
-### Count avec une map
+#### Count avec une map
 
 Modifier le code de l'exercice précédent pour qu'il fonctionne avec une `map` plutôt qu'une `list`.
 Ajouter également un tag sur la ressource avec pour clé: `name` et pour valeur: `app` ou `db` suivant le subnet.
@@ -150,7 +152,7 @@ _Aide:_
 - [Values function](https://developer.hashicorp.com/terraform/language/functions/values)
 - [Resource: aws_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
 
-### Foreach avec un set
+#### Foreach avec un set
 
 L'objectif de cet exercice est de définir un nombre d'instanciation d'une ressource en fonction de la valeur d'une variable.
 
@@ -173,7 +175,7 @@ _Aide:_
 - [for_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
 - [Resource: aws_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
 
-### Foreach avec une map
+#### Foreach avec une map
 
 Modifier le code de l'exercice précédent pour qu'il fonctionne avec une `map` plutôt qu'une `list`.
 Ajouter également un tag sur la ressource avec pour clé: `name` et pour valeur: `app` ou `db` suivant le subnet.
@@ -195,7 +197,7 @@ _Aide:_
 - [for_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
 - [Resource: aws_subnet](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet)
 
-### Dépendances explicites
+#### Dépendances explicites
 
 Dans le fichier `s3.tf`, modifier la spec du Bucket S3, pour l'obliger à être créé avant le VPC défini dans `network.tf`.
 
