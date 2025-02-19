@@ -28,18 +28,6 @@ _Aide:_
 - [Provider AWS](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 - [Dependency Lock File](https://developer.hashicorp.com/terraform/language/files/dependency-lock)
 
-### Découverte des commandes "plan" et "apply"
-
-- Avant de créer une première ressource, exécuter la commande `terraform plan`. Que fait cette commande ?
-- Exécuter ensuite la commande `terraform apply`. Quelle est la différence entre ces deux commandes ?
-- Observez la création d'un nouveau fichier `terraform.tfstate` et inspectez son contenu
-
-_Aide:_
-
-- [terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan)
-- [terraform apply](https://developer.hashicorp.com/terraform/cli/commands/apply)
-- [terraform state](https://developer.hashicorp.com/terraform/language/state)
-
 ### Création d'un "Bucket S3"
 
 - Créer un fichier `resources.tf` dans lequel sera défini la ressource `aws_s3_bucket`
@@ -63,6 +51,18 @@ _Aide:_
 - [terraform validate](https://developer.hashicorp.com/terraform/cli/commands/validate)
 - [terraform fmt](https://developer.hashicorp.com/terraform/cli/commands/fmt)
 - [terraform destroy](https://developer.hashicorp.com/terraform/cli/commands/destroy)
+
+### Découverte des commandes "plan" et "apply"
+
+- Avant de créer une première ressource, exécuter la commande `terraform plan`. Que fait cette commande ?
+- Exécuter ensuite la commande `terraform apply`. Quelle est la différence entre ces deux commandes ?
+- Observez la création d'un nouveau fichier `terraform.tfstate` et inspectez son contenu
+
+_Aide:_
+
+- [terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan)
+- [terraform apply](https://developer.hashicorp.com/terraform/cli/commands/apply)
+- [terraform state](https://developer.hashicorp.com/terraform/language/state)
 
 ### Variabilisation du nom du Bucket S3 (.tfvars)
 
@@ -94,6 +94,7 @@ _Aide:_
 - [Déclaration d'une variable dans un fichier dédié](https://developer.hashicorp.com/terraform/language/values/variables#values-for-undeclared-variables)
 - [Utilisation d'une variable dans un fichier dédié](https://developer.hashicorp.com/terraform/language/values/variables#variable-definitions-tfvars-files)
 - [Priorité sur la définition des variables](https://developer.hashicorp.com/terraform/language/values/variables#variable-definition-precedence)
+- [Définition de variable d'environnement en powershell](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#use-the-variable-syntax)
 
 ### Variabilisation du nom du Bucket S3 (locals / Data source)
 
